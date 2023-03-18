@@ -1,0 +1,40 @@
+.nav-mobile-extended-route {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  // background-color: red;
+}
+
+.nav-mobile-extended-route-main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 12px 0;
+  color: rgb(120, 120, 120);
+}
+
+.nav-mobile-extended-route-main h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nav-mobile-extended-route-main i {
+  -webkit-text-stroke: 1.2px;
+  font-size: 10px;
+}
+
+.nav-mobile-extended-route-secondary {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  padding: 30px;
+  border-left: 1px solid #e7e7e9;
+}
+
+.nav-mobile-extended-route-secondary h4 {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(120, 120, 120);
+}

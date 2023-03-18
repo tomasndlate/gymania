@@ -1,0 +1,80 @@
+<div class="nav">
+  <!-- Desktop navbar -->
+  <nav class="nav-desktop">
+    <div class="nav-desktop-navigation">
+      <label class="nav-logo">
+        <h4>Gymania</h4>
+      </label>
+      <ul class="nav-desktop-navigation-routes">
+        <li><h4>Home</h4></li>
+        <li><h4>About</h4></li>
+        <li><h4>Schedule</h4></li>
+        <li><h4>Blog</h4> </li>
+        <li><h4>Pricing</h4></li>
+      </ul>
+    </div>
+    <div class="nav-desktop-auth">
+      <div class="nav-auth-sign-in">
+        <h4>Sign in</h4>
+      </div>
+      <div class="nav-auth-sign-up">
+        <h4>Sign up</h4>
+      </div>
+    </div>
+  </nav>
+  <!-- Mobile navbar -->
+  <nav class="nav-mobile">
+    <div class="nav-mobile-drop-button-open" (click)="openRoutes(refNavMenu, refMenuButton)" #refMenuButton>
+      <li></li>
+      <li></li>
+      <li></li>
+    </div>
+
+    <div class="nav-mobile-logo">
+      <label class="nav-logo">
+        <h4>Gymania</h4>
+      </label>
+    </div>
+
+
+    <div class="nav-mobile-auth">
+      <div class="nav-auth-sign-in">
+        <h4>Sign in</h4>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav-mobile-extended nav-mobile-extended-visibility" #refNavMenu>
+
+    <app-mobile-route
+      [routeName]=" 'Home' "
+      [route]=" '' "
+      [subRoutes]="[{name: 'a', route: ''}, {name: 'b', route: ''}]">
+    </app-mobile-route>
+
+    <app-mobile-route
+      [routeName]=" 'About' "
+      [route]=" '' "
+      [subRoutes]="[{name: 'a', route: ''}, {name: 'b', route: ''}]">
+    </app-mobile-route>
+
+    <app-mobile-route
+      [routeName]=" 'Schedule' "
+      [route]=" '' "
+      [subRoutes]="[{name: 'a', route: ''}, {name: 'b', route: ''}]">
+    </app-mobile-route>
+
+    <app-mobile-route
+      [routeName]=" 'Blog' "
+      [route]=" '' "
+      [subRoutes]="[{name: 'a', route: ''}, {name: 'b', route: ''}]">
+    </app-mobile-route>
+
+    <app-mobile-route
+      [routeName]=" 'Pricing' "
+      [route]=" '' "
+      [subRoutes]="[{name: 'a', route: ''}, {name: 'b', route: ''}]">
+    </app-mobile-route>
+
+  </div>
+</div>

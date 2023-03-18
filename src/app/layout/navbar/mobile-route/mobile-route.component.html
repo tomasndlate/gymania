@@ -1,0 +1,11 @@
+<div class="nav-mobile-extended-route" #refRoute>
+  <li class="nav-mobile-extended-route-main">
+    <h4>{{routeName}}</h4>
+    <i class="bi bi-chevron-up" (click)="openCloseSubRoutes(refRoute)"></i>
+  </li>
+  <li class="nav-mobile-extended-route-secondary">
+    <h4 *ngFor="let subRoute of subRoutes">
+      {{subRoute.name}}
+    </h4>
+  </li>
+</div>
