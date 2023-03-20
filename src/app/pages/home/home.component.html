@@ -1,1 +1,54 @@
-<p>home works!</p>
+<!-- Presentation video -->
+<div class="home-main">
+  <video class="home-main-video" autoplay loop muted playsinline>
+    <source src="../../../assets/videos/home/home.mp4" type="video/mp4">
+  </video>
+  <div class="home-main-content">
+    <h1 class="home-main-content-title"> Workout <br> at gymania </h1>
+    <p class="home-main-content-subtitle">Hundreds of people and professionals around the country workout
+      at Gymania - the home to the world's true sportists and best professionals.</p>
+  </div>
+</div>
+
+<!-- Who we are -->
+<div class="home-content">
+  <h6 class="home-content-subtitle">About us</h6>
+  <h3 class="home-content-title">Who we are</h3>
+  <div class="about-content-grid">
+    <div *ngFor="let aboutT of aboutTopics">
+      <app-about-card
+        [imageSrc] = "aboutT.imageSrc"
+        [topic] = "aboutT.topic"
+        [title] = "aboutT.title"
+        [description] = "aboutT.description"
+      ></app-about-card>
+    </div>
+  </div>
+</div>
+<app-carousel></app-carousel>
+
+
+<!-- Upcoming classes -->
+<div class="home-content">
+  <h6 class="home-content-subtitle">Gui fiteness training</h6>
+  <h3 class="home-content-title">Upcoming classes</h3>
+  <div class="content-grid-4">
+    <div *ngFor="let fitClass of fitnessClasses">
+      <app-class-card
+        [imgSrc]= "fitClass.imageSrc"
+        [name]= "fitClass.name"
+        [description] = "fitClass.description"
+        [minutesDuration] = "fitClass.minutesDuration.toString()"
+        [date] = "fitClass.date.toString()"
+        >
+      </app-class-card>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div class="home-content">
+  <h6 class="home-content-subtitle">Discover gymania</h6>
+  <h3 class="home-content-title">Our gallery</h3>
+  <app-grid-gallery [gallery]="gallery" class="gallery-home-context"></app-grid-gallery>
+</div>

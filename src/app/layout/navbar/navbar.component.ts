@@ -17,6 +17,8 @@ export class NavbarComponent {
     let menuState = menu.style.display;
     let newMenuState = menuState != 'flex' ? 'flex' : 'none';
 
+    console.log(newMenuState)
+
     menu.style.display = newMenuState;
 
     if (newMenuState === 'flex'){

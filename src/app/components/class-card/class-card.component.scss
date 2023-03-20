@@ -1,0 +1,55 @@
+.class-card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.class-card-img{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: rgb(237, 237, 237);
+  overflow: hidden;
+}
+
+.class-card-img img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.class-card-name{
+  font-size: 1rem;
+}
+
+.class-card-description{
+  font-size: .9rem;
+  width: 25vw;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  // Browser need to support this webkit
+  @supports (-webkit-line-clamp: 2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+}
+
+.class-card-more{
+  font-size: .8rem;
+}

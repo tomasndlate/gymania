@@ -1,0 +1,88 @@
+.grid-gallery{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  min-height: 10px;
+  gap: 10px;
+}
+
+.grid-gallery-image{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+  overflow: hidden;
+  grid-column: span 1;
+  aspect-ratio: 1;
+
+  &:nth-child(10n + 3),
+  &:nth-child(10n + 6){
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+.grid-gallery-image img{
+  position: relative;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-gallery-image {
+    grid-column: span 1;
+    aspect-ratio: 1;
+
+    &:nth-child(10n + 3),
+    &:nth-child(10n + 6) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+
+  // Class declaration is on parent (home.html)
+  :host-context(.gallery-home-context) div {
+
+    &:nth-child(10) {
+      display: none;
+    }
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+  .grid-gallery-image {
+    grid-column: span 1;
+    aspect-ratio: 1;
+
+    &:nth-child(10n + 3),
+    &:nth-child(10n + 6) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+    // Class declaration is on parent (home.html)
+    :host-context(.gallery-home-context) div {
+    &:nth-child(n + 4) {
+      display: none;
+    }
+
+  }
+
+}

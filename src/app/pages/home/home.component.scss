@@ -1,0 +1,121 @@
+// Principal content
+.home-main{
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  min-height: 450px;
+  overflow: hidden;
+}
+
+.home-main-video{
+  position: absolute;
+  top: -4%;
+  height: 108%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home-main-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.home-main-video::-webkit-media-controls-enclosure {
+  display: none !important;
+}
+
+.home-main-video::-webkit-media-controls-panel {
+  display: none !important;
+}
+
+.home-main-content{
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  gap: 20px;
+}
+
+.home-main-content-title {
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.home-main-content-subtitle {
+  width: min(700px, 90vw);
+  text-align: center;
+  line-height: 25px;
+  font-size: 1rem;
+}
+
+// Other's contents
+.home-content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  height: fit-content;
+  width: 100%;
+  height: fit-content;
+  // background-color: red;
+}
+
+.home-content-subtitle{
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #ea4c89;
+}
+
+.home-content-title{
+  margin-bottom: 20px;
+}
+
+.content-grid-4{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+// About section
+.about-content-grid{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+  .about-content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .content-grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+  .about-content-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .content-grid-4 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
